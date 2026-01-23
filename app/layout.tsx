@@ -1,10 +1,11 @@
-import Providers from "./providers";
+import "@/app/globals.css";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
       <body>
-        <Providers>{children}</Providers>
+        <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
       </body>
     </html>
   );
