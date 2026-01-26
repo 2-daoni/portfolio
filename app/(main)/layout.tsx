@@ -29,12 +29,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko">
       <body>
-        <div className="flex flex-col bg-gray-100">
+        <div className="flex flex-col bg-gray-100 min-h-screen">
           {/* 고정 탭 */}
           <div className="fixed top-4 left-1/2 -translate-x-1/2 w-[70%] z-50 max-w-280 bg-white flex justify-between items-center p-2 rounded-md shadow-lg">
             <div>
               {tap.map((item) => {
-                const isActive = pathname === item.pathname;
+                const isActive =
+                  item.pathname === "/"
+                    ? pathname === "/"
+                    : pathname === item.pathname || pathname.startsWith(`${item.pathname}/`);
 
                 return (
                   <Tooltip key={item.name} title={item.name} arrow>

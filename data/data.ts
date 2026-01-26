@@ -73,7 +73,6 @@ export const ProfileData = {
       type: "activity",
     },
   ],
-  workExperience: [{}],
   education: {
     schoolName: "중부대학교",
     duration: "2018.03~2022.02",
@@ -86,11 +85,12 @@ export const ProfileData = {
 // 프로젝트
 export const Projects: Project[] = [
   {
+    slug: "health-admin",
     title: "통합 헬스케어 어드민 시스템",
     duration: "2023.08 - 2024.06",
     techStack: ["Next.js", "TypeScript", "AgoraRTC", "Tailwind CSS", "Storybook"],
     description:
-      "헬스케어 서비스 운영을 위한 통합 어드민 시스템으로, 다양한 도메인의 데이터를 관리하고 의료진 및 운영자의 업무 효율을 개선하는 것을 목표로 구축되었습니다.",
+      "자사 헬스케어 서비스 통합 운영을 위한 어드민 시스템으로, 다양한 도메인의 데이터를 관리하는 것을 목표로 구축되었습니다.",
     responsibilities: [
       "대시보드 및 회원 관리 등 어드민 핵심 기능 구현",
       "AgoraRTC 기반 화상 채팅 기능 구현",
@@ -98,8 +98,25 @@ export const Projects: Project[] = [
       "프론트엔드 파트 리딩 및 일정·업무 분배",
     ],
     icon: SupervisorAccountIcon,
+    img: [Dashboard, Dashboard2, Dashboard3],
   },
   {
+    slug: "busan-admin",
+    title: "부산시 '찾아가는 의료버스' 어드민 페이지 개발",
+    duration: "2023.08 - 2025.10",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Zustand", "Chart.js", "jsPDF"],
+    description:
+      "부산시 '찾아가는 의료버스'사업에서 의료진들이 사용하는 어드민으로 환자 등록 및 진료 정보 관리, 일정 관리 등을 목표로 구축되었습니다.",
+    responsibilities: [
+      "의료진용 어드민 페이지 프론트엔드 개발",
+      "환자 정보 조회, 진료 기록 입력, 예약 관리 기능 구현",
+      "어드민 전용 디자인 시스템을 설계하여 재사용성 확보",
+    ],
+    icon: SupervisorAccountIcon,
+    img: [Busan, Busan2, Busan3, Busan4, Busan5],
+  },
+  {
+    slug: "health-report",
     title: "헬스·수면·보험 데이터 리포트 시스템",
     duration: "2023.09 - 2025.10",
     techStack: ["Next.js", "TypeScript", "Chart.js", "html2canvas", "jsPDF"],
@@ -113,8 +130,27 @@ export const Projects: Project[] = [
       "공통 UI 기반 조건부 렌더링 및 스타일 분리",
     ],
     icon: AssessmentIcon,
+    img: [Sleep1, Sleep2, Sleep3, Sleep4],
   },
   {
+    slug: "hanok",
+    title: "버틀러리 - 한옥 숙박 예약 웹 서비스",
+    duration: "2022.05 - 2022.06",
+    techStack: ["React", "TypeScript", "Toss Payments", "REST API"],
+    description:
+      "한옥 숙박 예약을 위한 웹 서비스로, 예약부터 결제까지의 사용자 흐름을 고려한 UX 중심의 서비스를 구현했습니다.",
+    responsibilities: [
+      "전반적인 UI 및 페이지 구조 설계",
+      "예약(조회·신청·취소·사전 체크인) 기능 구현",
+      "소셜 로그인 및 회원 정보 수정 기능 구현",
+      "숙소 검색 및 필터링 기능 구현",
+      "Toss 결제 연동 및 반응형 UI 적용",
+    ],
+    icon: MapsHomeWorkIcon,
+    img: [Hanok, Hanok2, Hanok3],
+  },
+  {
+    slug: "ohmoss",
     title: "Ohmoss - 푸시 기반 팔로워 관리 소셜 앱",
     duration: "2023.01 - 2023.06",
     techStack: ["React Native", "TypeScript", "React Query", "i18n", "CodePush", "Figma"],
@@ -130,8 +166,10 @@ export const Projects: Project[] = [
       "App Store / Google Play 심사 대응 경험",
     ],
     icon: EmojiEmotionsIcon,
+    img: [OhmossApp],
   },
   {
+    slug: "sanginjangteo",
     title: "상인장터 - 소상공인을 위한 중고 거래 앱",
     duration: "2022.12 - 2023.01",
     techStack: ["React Native", "TypeScript", "CodePush", "Figma"],
@@ -143,8 +181,10 @@ export const Projects: Project[] = [
       "실사용자 피드백을 반영한 UI 개선",
     ],
     icon: DeliveryDiningIcon,
+    img: [Sangin],
   },
   {
+    slug: "saninAdmin",
     title: "상인장터 Admin - 자사 앱 관리 어드민",
     duration: "2022.08 - 2022.12",
     techStack: ["React", "TypeScript", "Chart.js", "REST API"],
@@ -157,8 +197,10 @@ export const Projects: Project[] = [
       "운영 효율성을 고려한 관리자 UI 설계",
     ],
     icon: SupervisorAccountIcon,
+    img: [],
   },
   {
+    slug: "ohmoss-web",
     title: "Ohmoss - 링크인바이오 웹 서비스",
     duration: "2022.06 - 2022.08",
     techStack: ["React", "TypeScript", "Styled-components", "Figma"],
@@ -170,21 +212,7 @@ export const Projects: Project[] = [
       "전반적인 웹 디자인 및 UI 구성",
     ],
     icon: SupervisorAccountIcon,
-  },
-  {
-    title: "버틀러리 - 한옥 숙박 예약 웹 서비스",
-    duration: "2022.05 - 2022.06",
-    techStack: ["React", "TypeScript", "Toss Payments", "REST API"],
-    description:
-      "한옥 숙박 예약을 위한 웹 서비스로, 예약부터 결제까지의 사용자 흐름을 고려한 UX 중심의 서비스를 구현했습니다.",
-    responsibilities: [
-      "전반적인 UI 및 페이지 구조 설계",
-      "예약(조회·신청·취소·사전 체크인) 기능 구현",
-      "소셜 로그인 및 회원 정보 수정 기능 구현",
-      "숙소 검색 및 필터링 기능 구현",
-      "Toss 결제 연동 및 반응형 UI 적용",
-    ],
-    icon: MapsHomeWorkIcon,
+    img: [OhmossWeb],
   },
 ];
 
@@ -257,3 +285,22 @@ import GithubIcon from "@/assets/skills/GitHub.svg";
 import VercelIcon from "@/assets/skills/Vercel.svg";
 import AmplifyIcon from "@/assets/skills/aws-amplify.png";
 import RizzUIIcon from "@/assets/skills/rizzui.svg";
+
+import Sleep1 from "@/assets/project/sleep1.png";
+import Sleep2 from "@/assets/project/sleep2.png";
+import Sleep3 from "@/assets/project/sleep3.png";
+import Sleep4 from "@/assets/project/sleep4.png";
+import Dashboard from "@/assets/project/dashboard.png";
+import Dashboard2 from "@/assets/project/dashboard2.png";
+import Dashboard3 from "@/assets/project/dashboard3.png";
+import Busan from "@/assets/project/busan.png";
+import Busan2 from "@/assets/project/busan2.png";
+import Busan3 from "@/assets/project/busan3.png";
+import Busan4 from "@/assets/project/busan4.png";
+import Busan5 from "@/assets/project/busan5.png";
+import OhmossApp from "@/assets/project/ohmoss-app.png";
+import OhmossWeb from "@/assets/project/ohmoss-web.png";
+import Sangin from "@/assets/project/sangin.png";
+import Hanok from "@/assets/project/hanok.png";
+import Hanok2 from "@/assets/project/hanok2.png";
+import Hanok3 from "@/assets/project/hanok3.png";

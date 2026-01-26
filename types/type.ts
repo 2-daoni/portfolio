@@ -1,6 +1,8 @@
 import { SvgIconComponent } from "@mui/icons-material";
+import { StaticImageData } from "next/image";
 
 export interface Project {
+  slug: string;
   title: string; // 프로젝트 명
   duration: string; // 프로젝트 기간
   techStack: string[]; // 사용 기술 스택
@@ -9,6 +11,7 @@ export interface Project {
   url?: string;
   file?: ProjectFile;
   icon: SvgIconComponent;
+  img: StaticImageData[];
 }
 
 export interface ProjectFile {
