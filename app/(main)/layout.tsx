@@ -21,8 +21,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     { name: "홈", icon: <HomeIcon />, pathname: "/" },
     { name: "자기소개", icon: <PersonIcon />, pathname: "/about" },
     { name: "프로젝트", icon: <FolderIcon />, pathname: "/project" },
-    { name: "스킬", icon: <ConstructionIcon />, pathname: "/skills" },
-    // { name: "자격증", icon: <WorkspacePremiumIcon />, pathname: "/certification" },
   ];
 
   const router = useRouter();

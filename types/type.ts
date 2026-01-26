@@ -33,3 +33,23 @@ export interface SkillCategory {
   category: string;
   items: string[];
 }
+
+export interface Career {
+  company: string;
+  period: string;
+  duration: string;
+  position: string;
+  employmentType: string;
+  projects?: CareerProject[];
+  work: string[];
+  summary: string;
+}
+
+export interface CareerProject {
+  title: string;
+  period?: string;
+  description: string;
+  responsibilities: string[];
+  techStack?: string[];
+  link?: string;
+}

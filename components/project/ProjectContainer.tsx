@@ -1,6 +1,6 @@
 "use client";
 import { Projects } from "@/data/data";
-import { Button, IconButton, Modal } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import Subject from "../common/Subject";
 import { useState } from "react";
 import { Project } from "@/types/type";
@@ -30,7 +30,7 @@ const ProjectContainer = () => {
   const router = useRouter();
 
   return (
-    <div className="bg-gray-100 p-4! rounded-md mt-8">
+    <div className="bg-gray-100 p-4! rounded-md mt-4">
       <div className="flex justify-between items-center mb-4">
         {Subject("Projects")}
         <Button

@@ -2,6 +2,7 @@
 import Profile from "../profile/Profile";
 import ProjectContainer from "../project/ProjectContainer";
 import SkillsContainer from "../skills/SkillsContainer";
+import CareerContainer from "../career/CareerContainer";
 
 const Container = () => {
   return (
@@ -10,6 +11,7 @@ const Container = () => {
         <Profile />
 
         <div className="space-y-4 scrollbar-hide">
+          <CareerContainer />
           <ProjectContainer />
           <SkillsContainer />
         </div>

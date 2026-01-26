@@ -1,10 +1,7 @@
+import AboutContainer from "@/components/about/AboutContainer";
+
 const AboutPage = () => {
-  return (
-    <div>
-      <p>skills</p>
-      <p>certification</p>
-    </div>
-  );
+  return <AboutContainer />;
 };
 
 export default AboutPage;

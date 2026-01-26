@@ -17,7 +17,7 @@ const SkillsContainer = () => {
       {Subject("Skills", "bg-green-300")}
 
       {/* 카테고리 버튼 */}
-      <div className="flex justify-center items-center gap-1 rounded-full bg-white p-1">
+      <div className="flex justify-center items-center gap-1 rounded-full mt-2 bg-white p-1">
         {skills.map(({ category }) => {
           const active = isCategoryActive(category) && currentCategory !== "";
 
