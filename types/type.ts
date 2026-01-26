@@ -1,3 +1,5 @@
+import { SvgIconComponent } from "@mui/icons-material";
+
 export interface Project {
   title: string; // 프로젝트 명
   duration: string; // 프로젝트 기간
@@ -6,6 +8,7 @@ export interface Project {
   responsibilities: string[]; // 내가 담당한 기능
   url?: string;
   file?: ProjectFile;
+  icon: SvgIconComponent;
 }
 
 export interface ProjectFile {

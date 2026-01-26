@@ -11,22 +11,79 @@ export const ProfileData = {
   },
   skills: [
     {
-      category: "Frontend",
-      items: ["Next.js", "React", "TypeScript"],
+      category: "프론트엔드",
+      items: [
+        { name: "Next.js", img: NextIcon },
+        { name: "React", img: ReactIcon },
+        { name: "TypeScript", img: TSIcon },
+        { name: "JavaScript", img: JSIcon },
+      ],
     },
     {
-      category: "Styling",
-      items: ["Tailwind CSS", "MUI", "styled-components"],
+      category: "UI & Styling",
+      items: [
+        { name: "Tailwind CSS", img: TailwindIcon },
+        { name: "MUI", img: MUIIcon },
+        { name: "Rizz UI", img: RizzUIIcon },
+        { name: "styled-components", img: StyledComponentIcon },
+        { name: "Sass", img: SassIcon },
+        { name: "Storybook", img: StoryBookIcon },
+      ],
     },
     {
-      category: "State & Data",
-      items: ["React Query", "Zustand", "Mobx"],
+      category: "상태관리",
+      items: [
+        { name: "React Query", img: ReactQueryIcon },
+        { name: "Zustand", img: ZustandIcon },
+        { name: "Mobx", img: MobxIcon },
+      ],
+    },
+    {
+      category: "환경 및 협업툴",
+      items: [
+        { name: "Github", img: GithubIcon },
+        { name: "AWS amplify", img: AmplifyIcon },
+        { name: "Vercel", img: VercelIcon },
+        { name: "Jira", img: JiraIcon },
+        { name: "Figma", img: FigmaIcon },
+        { name: "BitBucket", img: BitBucketIcon },
+        { name: "Confluence", img: ConfluenceIcon },
+      ],
     },
   ],
 };
 
 // 프로젝트
 export const Projects: Project[] = [
+  {
+    title: "통합 헬스케어 어드민 시스템",
+    duration: "2023.08 - 2024.06",
+    techStack: ["Next.js", "TypeScript", "AgoraRTC", "Tailwind CSS", "Storybook"],
+    description:
+      "헬스케어 서비스 운영을 위한 통합 어드민 시스템으로, 다양한 도메인의 데이터를 관리하고 의료진 및 운영자의 업무 효율을 개선하는 것을 목표로 구축되었습니다.",
+    responsibilities: [
+      "대시보드 및 회원 관리 등 어드민 핵심 기능 구현",
+      "AgoraRTC 기반 화상 채팅 기능 구현",
+      "공통 UI 컴포넌트 설계 및 디자인 시스템 구축",
+      "프론트엔드 파트 리딩 및 일정·업무 분배",
+    ],
+    icon: SupervisorAccountIcon,
+  },
+  {
+    title: "헬스·수면·보험 데이터 리포트 시스템",
+    duration: "2023.09 - 2025.10",
+    techStack: ["Next.js", "TypeScript", "Chart.js", "html2canvas", "jsPDF"],
+    description:
+      "헬스케어 및 금융 데이터를 시각화한 리포트 시스템으로, 다양한 고객사 요구에 맞춘 맞춤형 리포트를 웹·앱 환경에서 제공했습니다.",
+    responsibilities: [
+      "건강·수면·보험(GA) 리포트 웹/앱 버전 구현",
+      "Line, Bar, Radar, Doughnut 차트 동적 렌더링",
+      "웹 리포트를 PDF로 변환 및 다운로드 기능 구현",
+      "고객사별 CI/BI 반영 가능한 재사용 컴포넌트 구조 설계",
+      "공통 UI 기반 조건부 렌더링 및 스타일 분리",
+    ],
+    icon: AssessmentIcon,
+  },
   {
     title: "Ohmoss - 푸시 기반 팔로워 관리 소셜 앱",
     duration: "2023.01 - 2023.06",
@@ -42,6 +99,7 @@ export const Projects: Project[] = [
       "딥링크 설계 및 CodePush를 통한 앱 업데이트 운영",
       "App Store / Google Play 심사 대응 경험",
     ],
+    icon: EmojiEmotionsIcon,
   },
   {
     title: "상인장터 - 소상공인을 위한 중고 거래 앱",
@@ -54,6 +112,7 @@ export const Projects: Project[] = [
       "기존 앱 유지보수 및 CodePush를 활용한 기능 업데이트",
       "실사용자 피드백을 반영한 UI 개선",
     ],
+    icon: DeliveryDiningIcon,
   },
   {
     title: "상인장터 Admin - 자사 앱 관리 어드민",
@@ -67,6 +126,7 @@ export const Projects: Project[] = [
       "월/일별 가입자 수 통계 그래프 구현",
       "운영 효율성을 고려한 관리자 UI 설계",
     ],
+    icon: SupervisorAccountIcon,
   },
   {
     title: "Ohmoss - 링크인바이오 웹 서비스",
@@ -79,6 +139,7 @@ export const Projects: Project[] = [
       "테마 템플릿 시뮬레이터 UI 구현",
       "전반적인 웹 디자인 및 UI 구성",
     ],
+    icon: SupervisorAccountIcon,
   },
   {
     title: "버틀러리 - 한옥 숙박 예약 웹 서비스",
@@ -93,32 +154,33 @@ export const Projects: Project[] = [
       "숙소 검색 및 필터링 기능 구현",
       "Toss 결제 연동 및 반응형 UI 적용",
     ],
-  },
-  {
-    title: "통합 헬스케어 어드민 시스템",
-    duration: "2023.08 - 2024.06",
-    techStack: ["Next.js", "TypeScript", "AgoraRTC", "Tailwind CSS", "Storybook"],
-    description:
-      "헬스케어 서비스 운영을 위한 통합 어드민 시스템으로, 다양한 도메인의 데이터를 관리하고 의료진 및 운영자의 업무 효율을 개선하는 것을 목표로 구축되었습니다.",
-    responsibilities: [
-      "대시보드 및 회원 관리 등 어드민 핵심 기능 구현",
-      "AgoraRTC 기반 화상 채팅 기능 구현",
-      "공통 UI 컴포넌트 설계 및 디자인 시스템 구축",
-      "프론트엔드 파트 리딩 및 일정·업무 분배",
-    ],
-  },
-  {
-    title: "헬스·수면·보험 데이터 리포트 시스템",
-    duration: "2023.09 - 2025.10",
-    techStack: ["Next.js", "TypeScript", "Chart.js", "html2canvas", "jsPDF"],
-    description:
-      "헬스케어 및 금융 데이터를 시각화한 리포트 시스템으로, 다양한 고객사 요구에 맞춘 맞춤형 리포트를 웹·앱 환경에서 제공했습니다.",
-    responsibilities: [
-      "건강·수면·보험(GA) 리포트 웹/앱 버전 구현",
-      "Line, Bar, Radar, Doughnut 차트 동적 렌더링",
-      "웹 리포트를 PDF로 변환 및 다운로드 기능 구현",
-      "고객사별 CI/BI 반영 가능한 재사용 컴포넌트 구조 설계",
-      "공통 UI 기반 조건부 렌더링 및 스타일 분리",
-    ],
+    icon: MapsHomeWorkIcon,
   },
 ];
+
+import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
+import AssessmentIcon from "@mui/icons-material/Assessment";
+import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
+import DeliveryDiningIcon from "@mui/icons-material/DeliveryDining";
+import MapsHomeWorkIcon from "@mui/icons-material/MapsHomeWork";
+
+import NextIcon from "@/assets/skills/next.svg";
+import ReactIcon from "@/assets/skills/react.svg";
+import TSIcon from "@/assets/skills/typescript.svg";
+import TailwindIcon from "@/assets/skills/tailwind.svg";
+import MUIIcon from "@/assets/skills/Material UI.svg";
+import StyledComponentIcon from "@/assets/skills/styledComponents.png";
+import ReactQueryIcon from "@/assets/skills/react-query-icon.svg";
+import ZustandIcon from "@/assets/skills/zustand.svg";
+import MobxIcon from "@/assets/skills/mobx.svg";
+import SassIcon from "@/assets/skills/icons8-sass-아바타.svg";
+import StoryBookIcon from "@/assets/skills/Storybook.svg";
+import JiraIcon from "@/assets/skills/Jira.svg";
+import JSIcon from "@/assets/skills/JavaScript.svg";
+import FigmaIcon from "@/assets/skills/Figma.svg";
+import BitBucketIcon from "@/assets/skills/BitBucket.svg";
+import ConfluenceIcon from "@/assets/skills/Confluence.svg";
+import GithubIcon from "@/assets/skills/GitHub.svg";
+import VercelIcon from "@/assets/skills/Vercel.svg";
+import AmplifyIcon from "@/assets/skills/aws-amplify.png";
+import RizzUIIcon from "@/assets/skills/rizzui.svg";
