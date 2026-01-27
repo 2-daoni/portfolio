@@ -9,6 +9,7 @@ export const ProfileData = {
   keywords: ["프론트엔드 개발자", "협업", "소통", "함께 일하고 싶은 동료"],
   contacts: {
     email: "lyumilove9@gmail.com",
+    phone: "010-5648-5633",
     github: "https://github.com/2daoni1",
     blog: "https://2daoni.tistory.com/",
   },

@@ -23,14 +23,22 @@ const Project = () => {
             <Button
               key={title}
               variant="outlined"
-              className="text-gray-500! mb-1! p-3! bg-white! border-gray-100! mx-auto overflow-hidden flex flex-row justify-between!"
+              className=" w-full
+              text-gray-500!
+              mb-1!
+              p-2!
+              bg-white!
+              border-gray-100!
+              overflow-hidden
+              flex
+              "
               onClick={() => router.push(`/project/${slug}`)}
             >
-              <div className="flex items-start gap-2 min-w-0">
+              <div className="flex items-start gap-2 min-w-0 w-full">
                 <project.icon className="border rounded-full border-gray-200 p-0.5 mt-1" />
-                <div className="flex flex-col items-start overflow-hidden">
-                  <p className="truncate text-black">{title}</p>
-                  <p className="text-left text-[11px] truncate whitespace-pre-line">{description}</p>
+                <div className="flex flex-col items-start overflow-hidden min-w-0">
+                  <p className="truncate text-start text-black w-full">{title}</p>
+                  <p className="truncate text-left text-[11px] w-full">{description}</p>
                 </div>
               </div>
               <KeyboardArrowRightIcon style={{ width: 20, color: "#c2c2c2" }} />

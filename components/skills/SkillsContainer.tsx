@@ -44,7 +44,7 @@ const SkillsContainer = () => {
       </div>
 
       {/* 스킬 아이콘 */}
-      <div className="flex flex-wrap items-center gap-2 py-2">
+      <div className="flex flex-wrap items-center gap-2 py-2 mt-4">
         {skills.flatMap(({ category, items }) =>
           items.map((item) => {
             const active = isCategoryActive(category);

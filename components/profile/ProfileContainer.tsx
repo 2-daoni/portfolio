@@ -3,7 +3,7 @@
 import { ProfileData } from "@/data/data";
 import ProfileImage from "./ProfileImage";
 
-const Profile = () => {
+const ProfileContainer = () => {
   const { name, role, tagline } = ProfileData;
   return (
     <div className="flex items-center justify-between">
@@ -12,9 +12,9 @@ const Profile = () => {
         <p className="text-2xl">{role}</p>
         <p className="text-[12px] text-gray-600">{tagline}</p>
       </div>
-      <ProfileImage />
+      <ProfileImage className="mx-0" />
     </div>
   );
 };
 
-export default Profile;
+export default ProfileContainer;
