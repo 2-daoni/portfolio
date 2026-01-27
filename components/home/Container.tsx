@@ -3,6 +3,7 @@ import ProfileContainer from "../profile/ProfileContainer";
 import ProjectContainer from "../project/ProjectContainer";
 import SkillsContainer from "../skills/SkillsContainer";
 import CareerContainer from "../career/CareerContainer";
+import LinkContainer from "../about/LinkContainer";
 
 const Container = () => {
   return (
@@ -14,6 +15,7 @@ const Container = () => {
           <CareerContainer />
           <ProjectContainer />
           <SkillsContainer />
+          <LinkContainer />
         </div>
       </div>
     </div>

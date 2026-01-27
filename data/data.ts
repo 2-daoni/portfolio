@@ -10,8 +10,9 @@ export const ProfileData = {
   contacts: {
     email: "lyumilove9@gmail.com",
     phone: "010-5648-5633",
-    github: "https://github.com/2daoni1",
+    github: "https://github.com/2-daoni",
     blog: "https://2daoni.tistory.com/",
+    notion: "https://www.notion.so/daoni/4208a9762f3a4a559c7eb67c79bc72fe?source=copy_link",
   },
   skills: [
     {
