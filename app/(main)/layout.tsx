@@ -14,6 +14,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
+import { toast } from "react-hot-toast";
 
 type TapType = {
   name: string;
@@ -32,9 +33,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   const { contacts } = ProfileData;
 
-  const handleCopy = (text: string) => {
+  const handleCopy = (text: string, type: "email" | "phone") => {
     navigator.clipboard.writeText(text);
-    // toast 추가
+    toast.success(type === "email" ? "이메일이 복사되었습니다!" : "전화번호가 복사되었습니다!");
   };
 
   const router = useRouter();
@@ -110,7 +111,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   </div>
                   <div className="flex items-center justify-between bg-gray-100 rounded-md px-3 py-1 text-sm">
                     <span className="truncate">{contacts.email}</span>
-                    <IconButton size="small" onClick={() => handleCopy(contacts.email)}>
+                    <IconButton size="small" onClick={() => handleCopy(contacts.email, "email")}>
                       <ContentCopyIcon className="w-5! h-5!" />
                     </IconButton>
                   </div>
@@ -134,7 +135,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   </div>
                   <div className="flex items-center justify-between bg-gray-100 rounded-md px-3 py-1 text-sm">
                     <span>{contacts.phone}</span>
-                    <IconButton size="small" onClick={() => handleCopy(contacts.phone)}>
+                    <IconButton size="small" onClick={() => handleCopy(contacts.phone, "phone")}>
                       <ContentCopyIcon className="w-5! h-5!" />
                     </IconButton>
                   </div>

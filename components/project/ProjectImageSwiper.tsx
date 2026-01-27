@@ -7,9 +7,6 @@ import "swiper/css/pagination";
 
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
-import { Button, IconButton } from "@mui/material";
-
-import CloseIcon from "@mui/icons-material/Close";
 
 interface ProjectImageSwiperProps {
   images: StaticImageData[];
@@ -19,7 +16,6 @@ interface ProjectImageSwiperProps {
 const ProjectImageSwiper = ({ images, title }: ProjectImageSwiperProps) => {
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [currentImage, setCurrentImage] = useState<StaticImageData | null>(null);
 
   return (
     <>
@@ -29,8 +25,8 @@ const ProjectImageSwiper = ({ images, title }: ProjectImageSwiperProps) => {
         spaceBetween={12}
         slidesPerView={1.2}
         breakpoints={{
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
+          640: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
         }}
       >
         {images.map((image, index) => (
@@ -53,19 +49,7 @@ const ProjectImageSwiper = ({ images, title }: ProjectImageSwiperProps) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* {open && currentImage && (
-        <div
-          className="fixed inset-0 z-50 w-full h-full bg-black/70 flex items-center justify-center"
-          onClick={() => setOpen(false)}
-        >
-          <div className="relative w-[80vw] h-[70vh]" onClick={(e) => e.stopPropagation()}>
-            <Image src={currentImage} alt="project image" fill className="object-contain" />
-            <IconButton onClick={() => setOpen(false)} className="absolute! top-0 right-0 text-white text-2xl">
-              <CloseIcon className="text-white" />
-            </IconButton>
-          </div>
-        </div>
-      )} */}
+
       {open && (
         <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center">
           <button className="absolute top-4 right-4 text-white text-xl" onClick={() => setOpen(false)}>

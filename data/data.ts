@@ -87,22 +87,6 @@ export const ProfileData = {
 // 프로젝트
 export const Projects: Project[] = [
   {
-    slug: "health-admin",
-    title: "통합 헬스케어 어드민 시스템",
-    duration: "2023.08 - 2024.06",
-    techStack: ["Next.js", "TypeScript", "AgoraRTC", "Tailwind CSS", "Storybook"],
-    description:
-      "자사 헬스케어 서비스 통합 운영을 위한 어드민 시스템으로, 다양한 도메인의 데이터를 관리하는 것을 목표로 구축되었습니다.",
-    responsibilities: [
-      "대시보드 및 회원 관리 등 어드민 핵심 기능 구현",
-      "AgoraRTC 기반 화상 채팅 기능 구현",
-      "공통 UI 컴포넌트 설계 및 디자인 시스템 구축",
-      "프론트엔드 파트 리딩 및 일정·업무 분배",
-    ],
-    icon: SupervisorAccountIcon,
-    img: [Dashboard, Dashboard2, Dashboard3],
-  },
-  {
     slug: "busan-admin",
     title: "부산시 '찾아가는 의료버스' 어드민 페이지 개발",
     duration: "2023.08 - 2025.10",
@@ -132,11 +116,62 @@ export const Projects: Project[] = [
       "공통 UI 기반 조건부 렌더링 및 스타일 분리",
     ],
     icon: AssessmentIcon,
-    img: [Sleep1, Sleep2, Sleep3, Sleep4],
+    img: [Sleep1, Sleep2, Sleep3, Sleep4, Predict1, Predict2, Predict3, Predict4, Predict5, Predict6],
+    file: [
+      { name: "건강예측 레포트", url: "/predictReport.pdf", type: "pdf" },
+      { name: "고객사 레포트", url: "/myFinanceReport.pdf", type: "pdf" },
+    ],
+  },
+  {
+    slug: "health-admin",
+    title: "통합 헬스케어 어드민 시스템",
+    duration: "2023.08 - 2024.06",
+    techStack: ["Next.js", "TypeScript", "AgoraRTC", "Tailwind CSS", "Storybook"],
+    description:
+      "자사 헬스케어 서비스 통합 운영을 위한 어드민 시스템으로, 다양한 도메인의 데이터를 관리하는 것을 목표로 구축되었습니다.",
+    responsibilities: [
+      "대시보드 및 회원 관리 등 어드민 핵심 기능 구현",
+      "AgoraRTC 기반 화상 채팅 기능 구현",
+      "공통 UI 컴포넌트 설계 및 디자인 시스템 구축",
+      "프론트엔드 파트 리딩 및 일정·업무 분배",
+    ],
+    icon: SupervisorAccountIcon,
+    img: [Dashboard, Dashboard2, Dashboard3],
+  },
+  {
+    slug: "webview",
+    title: "자사 헬스케어 앱 내 모바일 웹뷰 개발",
+    duration: "2023.12-2024.08",
+    techStack: ["Next.js", "TypeScript", "Chart.js", "TailwindCSS"],
+    description:
+      "자사 헬스케어 앱내에 삽입되는 모바일 웹뷰 개발을 맡아 건강레포트, 사용자 맞춤 헬스 코칭 기능 등을 구현하였습니다.",
+    responsibilities: [
+      "헬스케어 앱 내 웹뷰 기반 리포트·코칭 UI 구현",
+      "JavaScript 핸들러를 이용한 앱–웹 간 연동 처리",
+      "모바일 환경에 최적화된 반응형 UI 구성",
+    ],
+    icon: AssessmentIcon,
+    img: [ReportApp1, ReportApp2, ReportApp3, ReportApp4],
+  },
+  {
+    slug: "homepage",
+    title: "회사 소개 웹사이트 개발",
+    duration: "2024.06-2024.08",
+    techStack: ["Next.js", "TypeScript", "i18n"],
+    description: "i18n 기반 다국어 지원과 반응형 웹을 적용한 회사 소개 사이트 개발 경험",
+    responsibilities: [
+      "i18n 적용을 통한 다국어 페이지 구성 및 언어 전환 로직 구현",
+      "반응형 레이아웃 설계로 다양한 디바이스 환경 대응",
+      "공통 레이아웃 및 UI 컴포넌트 분리로 재사용성 향상",
+    ],
+    icon: AssessmentIcon,
+    img: [Ontact, Sonix],
+    url: ["https://www.ontacthealth.com/", "https://sonixhealth.ai/ko"],
   },
   {
     slug: "hanok",
     title: "버틀러리 - 한옥 숙박 예약 웹 서비스",
+    url: ["https://www.butler-lee.com/"],
     duration: "2022.05 - 2022.06",
     techStack: ["React", "TypeScript", "Toss Payments", "REST API"],
     description:
@@ -306,3 +341,15 @@ import Sangin from "@/assets/project/sangin.png";
 import Hanok from "@/assets/project/hanok.png";
 import Hanok2 from "@/assets/project/hanok2.png";
 import Hanok3 from "@/assets/project/hanok3.png";
+import Sonix from "@/assets/project/sonix.png";
+import Ontact from "@/assets/project/ontact.png";
+import ReportApp1 from "@/assets/project/report-app1.png";
+import ReportApp2 from "@/assets/project/report-app2.png";
+import ReportApp3 from "@/assets/project/report-app3.png";
+import ReportApp4 from "@/assets/project/report-app4.png";
+import Predict1 from "@/assets/project/predict1.png";
+import Predict2 from "@/assets/project/predict2.png";
+import Predict3 from "@/assets/project/predict3.png";
+import Predict4 from "@/assets/project/predict4.png";
+import Predict5 from "@/assets/project/predict5.png";
+import Predict6 from "@/assets/project/predict6.png";

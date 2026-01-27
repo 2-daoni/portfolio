@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 const Project = () => {
   const router = useRouter();
   return (
-    <div className="space-y-2 mt-22 mb-5 w-[70%] max-w-280 text-black mx-auto bg-white p-7 pb-9 pt-5 rounded-md min-h-screen shadow-2xl">
+    <div className="space-y-2 mt-22 mb-5 w-[70%] max-w-200 text-black mx-auto bg-white p-7 pb-9 pt-5 rounded-md min-h-screen shadow-2xl">
       {Subject("Project", "bg-blue-300", "font-semibold!")}
       <p className="text-[12px]">
         지난 4년간 스타트업에 근무하며 진행한 프로젝트들입니다. <br />
@@ -38,7 +38,7 @@ const Project = () => {
                 <project.icon className="border rounded-full border-gray-200 p-0.5 mt-1" />
                 <div className="flex flex-col items-start overflow-hidden min-w-0">
                   <p className="truncate text-start text-black w-full">{title}</p>
-                  <p className="truncate text-left text-[11px] w-full">{description}</p>
+                  <p className="truncate text-left text-[11px] w-full lowercase">{description}</p>
                 </div>
               </div>
               <KeyboardArrowRightIcon style={{ width: 20, color: "#c2c2c2" }} />

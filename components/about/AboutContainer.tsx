@@ -14,7 +14,7 @@ const AboutContainer = () => {
   const { name, skills, activity, description, keywords, education } = ProfileData;
   const { schoolName, department, description: eduDesc, duration } = education;
   return (
-    <div className="space-y-2 mt-22 mb-5 w-[70%] max-w-280 text-black mx-auto bg-white p-7 pb-9 pt-5 rounded-md min-h-screen shadow-2xl">
+    <div className="space-y-2 mt-22 mb-5 w-[70%] max-w-200 text-black mx-auto bg-white p-7 pb-9 pt-5 rounded-md min-h-screen shadow-2xl">
       {Subject("About", "bg-purple-600", "font-semibold!")}
       <div className="text-[24px] my-4 text-center font-semibold">
         안녕하세요. <br />

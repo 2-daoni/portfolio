@@ -44,7 +44,7 @@ const ProjectContainer = () => {
               <item.icon className="border rounded-full border-gray-200 p-0.5" />
               <div className="flex flex-col items-start overflow-hidden">
                 <p className="truncate">{item.title}</p>
-                <p className="text-left text-[12px] whitespace-nowrap">{item.description}</p>
+                <p className="text-left text-[12px] whitespace-nowrap lowercase">{item.description}</p>
               </div>
             </div>
             <KeyboardArrowRightIcon style={{ width: 20, color: "#c2c2c2" }} />
