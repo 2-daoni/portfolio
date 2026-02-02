@@ -190,7 +190,7 @@ export const Projects: Project[] = [
     slug: "ohmoss",
     title: "Ohmoss - 푸시 기반 팔로워 관리 소셜 앱",
     duration: "2023.01 - 2023.06",
-    techStack: ["React Native", "TypeScript", "React Query", "i18n", "CodePush", "Figma"],
+    techStack: ["React Native", "TypeScript", "React Query", "i18n", "Figma"],
     description:
       "푸시 기반 팔로워 관리 소셜 앱으로, 사용자가 채널을 운영하고 팔로워와 소통할 수 있는 모바일 서비스입니다. 다국어 지원과 안정적인 업데이트 환경을 구축하여 글로벌 사용자를 고려한 앱 경험을 제공했습니다.",
     responsibilities: [
@@ -199,7 +199,6 @@ export const Projects: Project[] = [
       "알림 내역 조회 (검색, 기간 조회, 필터링)",
       "태그 CRUD 및 회원 정보 수정 기능 구현",
       "다국어(i18n) 처리 및 전반적인 앱 UI/UX 디자인",
-      "딥링크 설계 및 CodePush를 통한 앱 업데이트 운영",
       "App Store / Google Play 심사 대응 경험",
     ],
     icon: EmojiEmotionsIcon,
@@ -209,12 +208,11 @@ export const Projects: Project[] = [
     slug: "sanginjangteo",
     title: "상인장터 - 소상공인을 위한 중고 거래 앱",
     duration: "2022.12 - 2023.01",
-    techStack: ["React Native", "TypeScript", "CodePush", "Figma"],
+    techStack: ["React Native", "TypeScript", "Figma"],
     description: "소상공인을 위한 중고 거래 플랫폼으로, 이벤트와 커뮤니티 중심의 사용자 참여를 강화한 모바일 앱입니다.",
     responsibilities: [
       "이벤트용 베스트글 조회 화면 제작",
       "이벤트 배너 제작 및 디자인 수정",
-      "기존 앱 유지보수 및 CodePush를 활용한 기능 업데이트",
       "실사용자 피드백을 반영한 UI 개선",
     ],
     icon: DeliveryDiningIcon,
@@ -285,8 +283,6 @@ export const Careers: Career[] = [
     work: [
       "팔로워 관리, 채널 검색(텍스트/QR) 기능 구현",
       "알림 내역 조회 및 필터링 기능 개발",
-      "딥링크 설계 및 CodePush 업데이트 운영",
-      "CodePush 기반 업데이트 배포 및 사용자 피드백 반영",
       "반응형 웹 퍼블리싱",
       "소셜 로그인 및 회원정보 수정",
       "숙소 검색·필터링 및 Toss 결제 연동",
