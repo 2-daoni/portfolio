@@ -1,9 +1,9 @@
+import ExpandLessOutlinedIcon from "@mui/icons-material/ExpandLessOutlined";
+import ExpandMoreOutlinedIcon from "@mui/icons-material/ExpandMoreOutlined";
+import { Button, Divider } from "@mui/material";
+import { useState } from "react";
 import { Careers } from "@/data/data";
 import Subject from "../common/Subject";
-import { Button, Divider } from "@mui/material";
-import ExpandMoreOutlinedIcon from "@mui/icons-material/ExpandMoreOutlined";
-import ExpandLessOutlinedIcon from "@mui/icons-material/ExpandLessOutlined";
-import { useState } from "react";
 
 const CareerContainer = () => {
   const [showMoreCompany, setShowMoreCompany] = useState<string>("");
@@ -38,14 +38,18 @@ const CareerContainer = () => {
                 )}
                 주요 업무 내용 보기
               </Button>
-              {showMoreCompany === company && (
-                <div className="bg-white px-3 py-1 rounded-sm">
+              <div
+                className={`grid mt-1.5 transition-[grid-template-rows] duration-300 ease-in-out ${
+                  showMoreCompany === company ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                }`}
+              >
+                <ul className="overflow-hidden bg-white rounded-md space-y-1.5 leading-relaxed list-disc list-inside marker:text-orange-300 text-gray-600 [&>li]:mx-3 [&>li]:first:mt-3 [&>li]:last:mb-3">
                   {work.map((item) => (
-                    <p key={item}>- {item}</p>
+                    <li key={item}>{item}</li>
                   ))}
-                </div>
-              )}
-              {index === 0 && <Divider className="my-1!" />}
+                </ul>
+              </div>
+              {index !== Careers.length - 1 && <Divider className="my-2!" />}
             </div>
           );
         })}

@@ -1,4 +1,4 @@
-import { Career, Project } from "@/types/type";
+import type { Career, Project } from "@/types/type";
 
 export const ProfileData = {
   name: "이다원",
@@ -254,6 +254,19 @@ export const Projects: Project[] = [
 // 경력
 export const Careers: Career[] = [
   {
+    company: "스마일드래곤 (Smile Dragon Co., Ltd.)",
+    period: "2026.03 - 재직중",
+    duration: "4개월",
+    position: "프론트엔드 개발자",
+    employmentType: "정규직",
+    summary: "마케팅 플랫폼 'mkt24'의 웹 및 어드민 서비스를 개발하며, Claude Code를 적극 도입해 개발 생산성을 높임",
+    work: [
+      "mkt24 마케팅 플랫폼 웹 서비스 프론트엔드 개발",
+      "mkt24 어드민 시스템 프론트엔드 개발",
+      "Claude Code를 적극 도입하여 개발 생산성 향상",
+    ],
+  },
+  {
     company: "온택트헬스 (ONTACT HEALTH Co., Ltd.)",
     period: "2023.08 - 2025.10",
     duration: "2년 3개월",
@@ -290,60 +303,58 @@ export const Careers: Career[] = [
   },
 ];
 
-import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import AssessmentIcon from "@mui/icons-material/Assessment";
-import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 import DeliveryDiningIcon from "@mui/icons-material/DeliveryDining";
+import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 import MapsHomeWorkIcon from "@mui/icons-material/MapsHomeWork";
-
-import NextIcon from "@/assets/skills/next.svg";
-import ReactIcon from "@/assets/skills/react.svg";
-import TSIcon from "@/assets/skills/typescript.svg";
-import TailwindIcon from "@/assets/skills/tailwind.svg";
-import MUIIcon from "@/assets/skills/Material UI.svg";
-import StyledComponentIcon from "@/assets/skills/styledComponents.png";
-import ReactQueryIcon from "@/assets/skills/react-query-icon.svg";
-import ZustandIcon from "@/assets/skills/zustand.svg";
-import MobxIcon from "@/assets/skills/mobx.svg";
-import SassIcon from "@/assets/skills/icons8-sass-아바타.svg";
-import StoryBookIcon from "@/assets/skills/Storybook.svg";
-import JiraIcon from "@/assets/skills/Jira.svg";
-import JSIcon from "@/assets/skills/JavaScript.svg";
-import FigmaIcon from "@/assets/skills/Figma.svg";
-import BitBucketIcon from "@/assets/skills/BitBucket.svg";
-import ConfluenceIcon from "@/assets/skills/Confluence.svg";
-import GithubIcon from "@/assets/skills/GitHub.svg";
-import VercelIcon from "@/assets/skills/Vercel.svg";
-import AmplifyIcon from "@/assets/skills/aws-amplify.png";
-import RizzUIIcon from "@/assets/skills/rizzui.svg";
-
-import Sleep1 from "@/assets/project/sleep1.png";
-import Sleep2 from "@/assets/project/sleep2.png";
-import Sleep3 from "@/assets/project/sleep3.png";
-import Sleep4 from "@/assets/project/sleep4.png";
-import Dashboard from "@/assets/project/dashboard.png";
-import Dashboard2 from "@/assets/project/dashboard2.png";
-import Dashboard3 from "@/assets/project/dashboard3.png";
+import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import Busan from "@/assets/project/busan.png";
 import Busan2 from "@/assets/project/busan2.png";
 import Busan3 from "@/assets/project/busan3.png";
 import Busan4 from "@/assets/project/busan4.png";
 import Busan5 from "@/assets/project/busan5.png";
-import OhmossApp from "@/assets/project/ohmoss-app.png";
-import OhmossWeb from "@/assets/project/ohmoss-web.png";
-import Sangin from "@/assets/project/sangin.png";
+import Dashboard from "@/assets/project/dashboard.png";
+import Dashboard2 from "@/assets/project/dashboard2.png";
+import Dashboard3 from "@/assets/project/dashboard3.png";
 import Hanok from "@/assets/project/hanok.png";
 import Hanok2 from "@/assets/project/hanok2.png";
 import Hanok3 from "@/assets/project/hanok3.png";
-import Sonix from "@/assets/project/sonix.png";
+import OhmossApp from "@/assets/project/ohmoss-app.png";
+import OhmossWeb from "@/assets/project/ohmoss-web.png";
 import Ontact from "@/assets/project/ontact.png";
-import ReportApp1 from "@/assets/project/report-app1.png";
-import ReportApp2 from "@/assets/project/report-app2.png";
-import ReportApp3 from "@/assets/project/report-app3.png";
-import ReportApp4 from "@/assets/project/report-app4.png";
 import Predict1 from "@/assets/project/predict1.png";
 import Predict2 from "@/assets/project/predict2.png";
 import Predict3 from "@/assets/project/predict3.png";
 import Predict4 from "@/assets/project/predict4.png";
 import Predict5 from "@/assets/project/predict5.png";
 import Predict6 from "@/assets/project/predict6.png";
+import ReportApp1 from "@/assets/project/report-app1.png";
+import ReportApp2 from "@/assets/project/report-app2.png";
+import ReportApp3 from "@/assets/project/report-app3.png";
+import ReportApp4 from "@/assets/project/report-app4.png";
+import Sangin from "@/assets/project/sangin.png";
+import Sleep1 from "@/assets/project/sleep1.png";
+import Sleep2 from "@/assets/project/sleep2.png";
+import Sleep3 from "@/assets/project/sleep3.png";
+import Sleep4 from "@/assets/project/sleep4.png";
+import Sonix from "@/assets/project/sonix.png";
+import AmplifyIcon from "@/assets/skills/aws-amplify.png";
+import BitBucketIcon from "@/assets/skills/BitBucket.svg";
+import ConfluenceIcon from "@/assets/skills/Confluence.svg";
+import FigmaIcon from "@/assets/skills/Figma.svg";
+import GithubIcon from "@/assets/skills/GitHub.svg";
+import SassIcon from "@/assets/skills/icons8-sass-아바타.svg";
+import JSIcon from "@/assets/skills/JavaScript.svg";
+import JiraIcon from "@/assets/skills/Jira.svg";
+import MUIIcon from "@/assets/skills/Material UI.svg";
+import MobxIcon from "@/assets/skills/mobx.svg";
+import NextIcon from "@/assets/skills/next.svg";
+import ReactIcon from "@/assets/skills/react.svg";
+import ReactQueryIcon from "@/assets/skills/react-query-icon.svg";
+import RizzUIIcon from "@/assets/skills/rizzui.svg";
+import StoryBookIcon from "@/assets/skills/Storybook.svg";
+import StyledComponentIcon from "@/assets/skills/styledComponents.png";
+import TailwindIcon from "@/assets/skills/tailwind.svg";
+import TSIcon from "@/assets/skills/typescript.svg";
+import VercelIcon from "@/assets/skills/Vercel.svg";
+import ZustandIcon from "@/assets/skills/zustand.svg";
