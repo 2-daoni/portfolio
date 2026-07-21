@@ -1,12 +1,11 @@
-import Subject from "../common/Subject";
+import GroupsIcon from "@mui/icons-material/Groups";
+import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
+import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import { Divider } from "@mui/material";
 import { ProfileData } from "@/data/data";
 import { highlightText } from "@/utils/highlightText";
-
-import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
-import GroupsIcon from "@mui/icons-material/Groups";
+import Subject from "../common/Subject";
 import ProfileImage from "../profile/ProfileImage";
-import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 
 const AboutContainer = () => {
   const { name, skills, activity, description, keywords, education } = ProfileData;
@@ -33,7 +32,7 @@ const AboutContainer = () => {
               <p key={item.name} className="border p-1 rounded-sm text-[12px] border-gray-300">
                 {item.name}
               </p>
-            ))
+            )),
           )}
       </div>
       <Divider className="my-4!" />

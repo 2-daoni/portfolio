@@ -1,14 +1,13 @@
-import { ProfileData } from "@/data/data";
-import Image from "next/image";
-import { Button, Tooltip } from "@mui/material";
-import Subject from "../common/Subject";
-
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
+import { Button, Tooltip } from "@mui/material";
+import Image from "next/image";
+import { toast } from "react-hot-toast";
+import NotionIcon from "@/assets/notion.svg";
 import GithubIcon from "@/assets/skills/GitHub.svg";
 import TistoryIcon from "@/assets/Tistory.svg";
-import NotionIcon from "@/assets/notion.svg";
-import { toast } from "react-hot-toast";
+import { ProfileData } from "@/data/data";
+import Subject from "../common/Subject";
 
 const LinkContainer = () => {
   const { contacts } = ProfileData;
@@ -50,16 +49,17 @@ const LinkContainer = () => {
           </Tooltip>
         ))}
       </div>
-      <div
+      <button
+        type="button"
         onClick={() => {
           navigator.clipboard.writeText(contacts.email);
           toast.success("이메일이 복사되었습니다!");
         }}
-        className="flex cursor-pointer items-center justify-center my-2 text-[14px]"
+        className="flex w-full cursor-pointer items-center justify-center my-2 text-[14px]"
       >
         <EmailIcon className="w-4! h-4! mr-2" />
         <p>{contacts.email}</p>
-      </div>
+      </button>
       <div className="flex items-center justify-center text-[14px]">
         <PhoneIcon className="w-4! h-4! mr-2" />
         <p>{contacts.phone}</p>

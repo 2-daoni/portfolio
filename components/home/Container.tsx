@@ -1,9 +1,9 @@
 "use client";
+import LinkContainer from "../about/LinkContainer";
+import CareerContainer from "../career/CareerContainer";
 import ProfileContainer from "../profile/ProfileContainer";
 import ProjectContainer from "../project/ProjectContainer";
 import SkillsContainer from "../skills/SkillsContainer";
-import CareerContainer from "../career/CareerContainer";
-import LinkContainer from "../about/LinkContainer";
 
 const Container = () => {
   return (

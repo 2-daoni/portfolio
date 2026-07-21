@@ -1,9 +1,9 @@
 "use client";
 
+import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
+import { Button } from "@mui/material";
 import { ProfileData } from "@/data/data";
 import ProfileImage from "./ProfileImage";
-import { Button } from "@mui/material";
-import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 
 const ProfileContainer = () => {
   const { name, role, tagline } = ProfileData;

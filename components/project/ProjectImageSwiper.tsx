@@ -1,11 +1,11 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import Image, { StaticImageData } from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import { useState } from "react";
 
 interface ProjectImageSwiperProps {
@@ -30,11 +30,12 @@ const ProjectImageSwiper = ({ images, title }: ProjectImageSwiperProps) => {
         }}
       >
         {images.map((image, index) => (
+          // biome-ignore lint/suspicious/noArrayIndexKey: static image list, no stable id
           <SwiperSlide key={`${title}-${index}`}>
-            <div
-              className="relative w-full h-40 overflow-hidden"
+            <button
+              type="button"
+              className="relative block w-full h-40 overflow-hidden"
               onClick={() => {
-                // setCurrentImage(image);
                 setActiveIndex(index);
                 setOpen(true);
               }}
@@ -45,14 +46,14 @@ const ProjectImageSwiper = ({ images, title }: ProjectImageSwiperProps) => {
                 fill
                 className="object-contain transition-transform duration-300 hover:scale-105"
               />
-            </div>
+            </button>
           </SwiperSlide>
         ))}
       </Swiper>
 
       {open && (
         <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center">
-          <button className="absolute top-4 right-4 text-white text-xl" onClick={() => setOpen(false)}>
+          <button type="button" className="absolute top-4 right-4 text-white text-xl" onClick={() => setOpen(false)}>
             ✕
           </button>
 
@@ -66,6 +67,7 @@ const ProjectImageSwiper = ({ images, title }: ProjectImageSwiperProps) => {
             className="w-full max-w-3xl"
           >
             {images.map((image, index) => (
+              // biome-ignore lint/suspicious/noArrayIndexKey: static image list, no stable id
               <SwiperSlide key={index}>
                 <div className="flex justify-center">
                   <Image src={image} alt="" className="max-h-[80vh] w-auto object-contain" />

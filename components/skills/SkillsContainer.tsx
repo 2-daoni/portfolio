@@ -1,9 +1,9 @@
-import { ProfileData } from "@/data/data";
-import Subject from "../common/Subject";
-import Image from "next/image";
 import { Button, Tooltip } from "@mui/material";
+import Image from "next/image";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
+import { ProfileData } from "@/data/data";
+import Subject from "../common/Subject";
 
 const SkillsContainer = () => {
   const { skills } = ProfileData;
@@ -34,7 +34,7 @@ const SkillsContainer = () => {
               sx={{ textTransform: "none" }}
               className={twMerge(
                 "text-[12px]! text-black! rounded-full! px-2! py-1! ",
-                active && "bg-green-600! text-white!"
+                active && "bg-green-600! text-white!",
               )}
             >
               {category}
@@ -61,7 +61,7 @@ const SkillsContainer = () => {
                 />
               </Tooltip>
             );
-          })
+          }),
         )}
       </div>
     </div>

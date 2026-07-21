@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
-import { Projects } from "@/data/data";
 import { use } from "react";
-import { Project } from "@/types/type";
 import ProjectDetail from "@/components/project/ProjectDetail";
+import { Projects } from "@/data/data";
+import type { Project } from "@/types/type";
 
 const ProjectDetailPage = ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = use(params);

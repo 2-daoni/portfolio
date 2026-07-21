@@ -1,9 +1,9 @@
 "use client";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { Button } from "@mui/material";
+import { useRouter } from "next/navigation";
 import { Projects } from "@/data/data";
 import Subject from "../common/Subject";
-import { Button } from "@mui/material";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import { useRouter } from "next/navigation";
 
 const Project = () => {
   const router = useRouter();

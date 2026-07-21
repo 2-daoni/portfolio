@@ -1,5 +1,5 @@
-import { SvgIconComponent } from "@mui/icons-material";
-import { StaticImageData } from "next/image";
+import type { SvgIconComponent } from "@mui/icons-material";
+import type { StaticImageData } from "next/image";
 
 export interface Project {
   slug: string;

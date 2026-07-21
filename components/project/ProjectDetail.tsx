@@ -1,10 +1,10 @@
 "use client";
-import { notFound, useRouter } from "next/navigation";
-import { IconButton } from "@mui/material";
-import { Project } from "@/types/type";
-import ProjectImageSwiper from "@/components/project/ProjectImageSwiper";
-import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
+import { IconButton } from "@mui/material";
+import { notFound, useRouter } from "next/navigation";
+import ProjectImageSwiper from "@/components/project/ProjectImageSwiper";
+import type { Project } from "@/types/type";
 
 type ProjectTypes = {
   project: Project;

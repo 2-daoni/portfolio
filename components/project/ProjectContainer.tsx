@@ -1,13 +1,12 @@
 "use client";
-import { Projects } from "@/data/data";
-import { Button, IconButton } from "@mui/material";
-import Subject from "../common/Subject";
-import { useState } from "react";
-
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { Button, IconButton } from "@mui/material";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { Projects } from "@/data/data";
+import Subject from "../common/Subject";
 
 const PREVIEW_COUNT = 3;
 

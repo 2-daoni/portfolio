@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import ProfileImg from "@/assets/profile.png";
-import RealProfileImg from "@/assets/realProfile.jpg";
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
+import ProfileImg from "@/assets/profile.png";
+import RealProfileImg from "@/assets/realProfile.jpg";
 
 type ProfileImageTypes = {
   className?: string;
