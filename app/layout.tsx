@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     template: `%s | ${ProfileData.name}`,
   },
   description: ProfileData.tagline,
+  keywords: ProfileData.keywords,
   openGraph: {
     title,
     description: ProfileData.tagline,
@@ -21,6 +22,11 @@ export const metadata: Metadata = {
     siteName: title,
     locale: "ko_KR",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description: ProfileData.tagline,
   },
 };
 
