@@ -22,7 +22,7 @@ type TapType = {
   pathname: string;
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function MainLayout({ children }: { children: React.ReactNode }) {
   const tap: TapType[] = [
     { name: "홈", icon: <HomeIcon />, pathname: "/" },
     { name: "자기소개", icon: <PersonIcon />, pathname: "/about" },
@@ -42,9 +42,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const pathname = usePathname();
 
   return (
-    <html lang="ko">
-      <body>
-        <div className="flex flex-col bg-gray-100 min-h-screen">
+    <>
+      <div className="flex flex-col bg-gray-100 min-h-screen">
           {/* 고정 탭 */}
           <div className="fixed top-4 left-1/2 -translate-x-1/2 w-[70%] z-50 max-w-200 bg-white flex justify-between items-center p-2 rounded-md shadow-lg">
             <div>
@@ -143,8 +142,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </div>
             </Modal>
           )}
-        </div>
-      </body>
-    </html>
+      </div>
+    </>
   );
 }

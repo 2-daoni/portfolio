@@ -1,7 +1,5 @@
-import Image from "next/image";
 import Subject from "../common/Subject";
 import { Divider } from "@mui/material";
-import ProfileImg from "@/assets/profile.png";
 import { ProfileData } from "@/data/data";
 import { highlightText } from "@/utils/highlightText";
 

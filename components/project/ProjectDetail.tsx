@@ -63,7 +63,7 @@ const ProjectDetail = ({ project }: ProjectTypes) => {
                 ))}
               </div>
               <p className="text-[10px] text-red-500">
-                pdf 파일에 암호가 걸려있는경우 "991118" 입력 후 확인 부탁드립니다.
+                pdf 파일에 암호가 걸려있는경우 &quot;991118&quot; 입력 후 확인 부탁드립니다.
               </p>
             </div>
           </div>

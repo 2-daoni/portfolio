@@ -3,15 +3,17 @@ import { Projects } from "@/data/data";
 import { Button, IconButton } from "@mui/material";
 import Subject from "../common/Subject";
 import { useState } from "react";
-import { Project } from "@/types/type";
 
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import { useRouter } from "next/navigation";
 
+const PREVIEW_COUNT = 3;
+
 const ProjectContainer = () => {
-  const [list, setList] = useState<Project[]>(Projects.slice(0, 3));
+  const [expanded, setExpanded] = useState(false);
+  const list = expanded ? Projects : Projects.slice(0, PREVIEW_COUNT);
 
   const router = useRouter();
 
@@ -50,56 +52,16 @@ const ProjectContainer = () => {
             <KeyboardArrowRightIcon style={{ width: 20, color: "#c2c2c2" }} />
           </Button>
         ))}
-        <IconButton
-          onClick={() => {
-            if (list.length < 4) {
-              setList(Projects);
-            } else {
-              setList(Projects.slice(0, 3));
-            }
-          }}
-          style={{ color: "gray" }}
-          className="p-0! max-w-fit! mx-auto!"
-        >
-          {list.length > 4 ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-        </IconButton>
-      </div>
-
-      {/* 프로젝트 상세 바텀시트 */}
-      {/* <Drawer
-        anchor="bottom"
-        open={open}
-        onClose={handleClose}
-        PaperProps={{
-          className: "rounded-t-2xl p-4 relative max-w-[500px]! mx-auto max-h-[85vh] text-gray-700",
-        }}
-      >
-
-        <div className=" flex flex-col gap-2 overflow-y-auto">
-          <IconButton onClick={handleClose} size="small" className="absolute! right-2 top-2 ">
-            <CloseIcon />
+        {Projects.length > PREVIEW_COUNT && (
+          <IconButton
+            onClick={() => setExpanded((prev) => !prev)}
+            style={{ color: "gray" }}
+            className="p-0! max-w-fit! mx-auto!"
+          >
+            {expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
           </IconButton>
-          <p className="font-bold text-lg">{currentProject?.title}</p>
-          <div className="w-full h-30 bg-blue-100" />
-          <p>{currentProject?.duration}</p>
-          <p className="text-sm text-gray-500">{currentProject?.description}</p>
-          <p>
-            {currentProject?.techStack?.map((item, index) => (
-              <span key={item} className="text-sm">
-                {item}
-                {index !== currentProject?.techStack?.length - 1 && ", "}
-              </span>
-            ))}
-          </p>
-          <div className="flex flex-col gap-1">
-            {currentProject?.responsibilities?.map((item, index) => (
-              <p key={item} className="text-sm">
-                {index + 1}. {item}
-              </p>
-            ))}
-          </div>
-        </div>
-      </Drawer> */}
+        )}
+      </div>
     </div>
   );
 };
