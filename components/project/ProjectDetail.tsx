@@ -1,8 +1,10 @@
 "use client";
-import { notFound } from "next/navigation";
+import { notFound, useRouter } from "next/navigation";
+import { IconButton } from "@mui/material";
 import { Project } from "@/types/type";
 import ProjectImageSwiper from "@/components/project/ProjectImageSwiper";
 import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 type ProjectTypes = {
   project: Project;
@@ -10,11 +12,16 @@ type ProjectTypes = {
 
 const ProjectDetail = ({ project }: ProjectTypes) => {
   const { title, description, duration, url, file, img, responsibilities, techStack } = project;
+  const router = useRouter();
 
   if (!project) return notFound();
 
   return (
     <div className="space-y-2 text-gray-600 mt-22 mb-5 w-[70%] max-w-200  mx-auto bg-white p-5 pb-9 rounded-md shadow-2xl">
+      <IconButton onClick={() => router.push("/project")} className="p-0! mb-4!" style={{ color: "gray" }}>
+        <ArrowBackIcon />
+      </IconButton>
+
       <div className="bg-gray-100 py-2 px-3 rounded-md text-[12px] space-y-2">
         <div className="flex items-center">
           <p className="min-w-20">기간</p>

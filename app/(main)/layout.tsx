@@ -44,6 +44,9 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
   return (
     <>
       <div className="flex flex-col bg-gray-100 min-h-screen">
+          {/* 상단 스크롤 블러 오버레이 */}
+          <div className="fixed inset-x-0 top-0 h-20 z-40 backdrop-blur-md bg-gradient-to-b from-gray-100/90 to-transparent pointer-events-none" />
+
           {/* 고정 탭 */}
           <div className="fixed top-4 left-1/2 -translate-x-1/2 w-[70%] z-50 max-w-200 bg-white flex justify-between items-center p-2 rounded-md shadow-lg">
             <div>
