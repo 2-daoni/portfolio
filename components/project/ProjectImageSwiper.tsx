@@ -44,6 +44,7 @@ const ProjectImageSwiper = ({ images, title }: ProjectImageSwiperProps) => {
                 src={image}
                 alt={title}
                 fill
+                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 80vw"
                 className="object-contain transition-transform duration-300 hover:scale-105"
               />
             </button>

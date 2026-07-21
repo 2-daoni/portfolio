@@ -5,11 +5,7 @@ import ProjectDetail from "@/components/project/ProjectDetail";
 import { Projects } from "@/data/data";
 import type { Project } from "@/types/type";
 
-export const generateMetadata = async ({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> => {
+export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> => {
   const { slug } = await params;
   const project = Projects.find((p) => p.slug === slug);
 

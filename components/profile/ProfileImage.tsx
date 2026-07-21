@@ -30,7 +30,7 @@ const ProfileImage = ({ className }: ProfileImageTypes) => {
 
           {/* 뒷면 - 실물 사진 */}
           <div className="flip-back">
-            <Image src={RealProfileImg} alt="real profile" fill className="object-cover rounded-full" />
+            <Image src={RealProfileImg} alt="real profile" fill sizes="128px" className="object-cover rounded-full" />
           </div>
         </div>
       </div>
